@@ -1,0 +1,23 @@
+platform :ios, '8.0'
+
+use_frameworks!
+
+
+workspace 'RKExtensions.xcworkspace'
+
+
+def common_pods
+    
+    pod 'Masonry'
+        
+end
+
+
+target 'RKExtensions' do
+    project 'RKExtensions/RKExtensions.xcodeproj'
+
+    common_pods
+    
+end
+
+

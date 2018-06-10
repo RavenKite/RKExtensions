@@ -1,0 +1,6 @@
+framework module Pods_RKExtensions {
+  umbrella header "Pods-RKExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
