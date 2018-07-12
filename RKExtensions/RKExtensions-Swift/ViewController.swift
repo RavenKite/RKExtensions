@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        let str = "123abc天地人#$%"
+        
+        let encode = str.urlEncode()
+        
+        print_debug(encode)
     }
 
 

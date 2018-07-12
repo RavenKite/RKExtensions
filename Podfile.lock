@@ -1,16 +1,28 @@
 PODS:
   - Masonry (1.1.0)
+  - RKRuntime (0.1.0)
 
 DEPENDENCIES:
   - Masonry
+  - RKRuntime (from `https://github.com/RavenKite/RKRuntime.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
 
+EXTERNAL SOURCES:
+  RKRuntime:
+    :git: https://github.com/RavenKite/RKRuntime.git
+
+CHECKOUT OPTIONS:
+  RKRuntime:
+    :commit: 8c19f8c5282f900010a9f801b7fadfa661eedb51
+    :git: https://github.com/RavenKite/RKRuntime.git
+
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  RKRuntime: 2320d0c9794eef18c174918ee90cad3ac27d2349
 
-PODFILE CHECKSUM: 0684defd54ae381ab3154ac5a381d9a003954e07
+PODFILE CHECKSUM: ae8e7ecedc0a0499c058d73e0b148310a536ad1e
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

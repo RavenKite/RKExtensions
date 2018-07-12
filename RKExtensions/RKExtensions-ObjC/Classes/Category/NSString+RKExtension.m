@@ -55,7 +55,7 @@ static NSString * const kURLEncodeParameter = @"!*'();:@&=+$,/?%#[]";
 
 - (NSString *)hmac_sha1WithKey:(NSString *)key {
     // URLEncoding
-    NSString *urlEncodingString = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef) @"!$&'()*+,-/:;=?@_~%#[]", kCFStringEncodingUTF8);
+    NSString *urlEncodingString = [self URLEncodeString];
     
     // UTF8 Encoding
     const char *cData = [urlEncodingString cStringUsingEncoding:NSUTF8StringEncoding];
@@ -93,24 +93,15 @@ static NSString * const kURLEncodeParameter = @"!*'();:@&=+$,/?%#[]";
 // MARK: - Match & Scanner
 
 - (BOOL)isEmail {
-    return [self isMatchedWithRegex:kRegexEamil];
+    return [self matchedRegex:kRegexEamil];
 }
 
 - (BOOL)isPhonNumber {
-    return [self isMatchedWithRegex:kRegexPhoneNumber];
+    return [self matchedRegex:kRegexPhoneNumber];
 }
 
 - (BOOL)isNumber {
-    return [self isMatchedWithRegex:kRegexEamil];
-}
-
-- (BOOL)isMatchedWithRegex:(NSString *)regex {
-    NSRegularExpression *regular = [self regularExpressionWithRegex:regex];
-    if (!regular) { return false; }
-    
-    NSUInteger matchCount = [regular numberOfMatchesInString:self options:NSMatchingReportProgress range:NSMakeRange(0, self.length)];
-    
-    return matchCount == 0 ? false : true;
+    return [self matchedRegex:kRegexEamil];
 }
 
 
@@ -123,25 +114,99 @@ static NSString * const kURLEncodeParameter = @"!*'();:@&=+$,/?%#[]";
 }
 
 - (NSString*)URLEncodeStringWithParameter:(NSString *)parameter {
-    CFStringRef cfString = CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                   (CFStringRef)self,
-                                                                   NULL,
-                                                                   (CFStringRef)parameter,
-                                                                   kCFStringEncodingUTF8);
-    NSString *encodedString = (NSString *)CFBridgingRelease(cfString);
+    NSString *encodedString = self;
+    if (@available(iOS 9.0, *)) {
+        NSCharacterSet *characterSet = NSCharacterSet.alphanumericCharacterSet;
+        encodedString = [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+    } else {
+        CFStringRef cfString = CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                       (CFStringRef)self,
+                                                                       NULL,
+                                                                       (CFStringRef)parameter,
+                                                                       kCFStringEncodingUTF8);
+        encodedString = (NSString *)CFBridgingRelease(cfString);
+    }
     
     return encodedString;
 }
 
 - (NSString *)URLDecodedString {
     
-    CFStringRef cfString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-                                                                                   (CFStringRef)self,
-                                                                                   CFSTR(""),
-                                                                                   kCFStringEncodingUTF8);
+   CFStringRef cfString = CFURLCreateStringByReplacingPercentEscapes(kCFAllocatorDefault,
+                                                                     (CFStringRef)self,
+                                                                     CFSTR(""));
+//    CFStringRef cfString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+//                                                                                   (CFStringRef)self,
+//                                                                                   CFSTR(""),
+//                                                                                   kCFStringEncodingUTF8);
     return (NSString *)CFBridgingRelease(cfString);
 }
 
+
+
+// MARK: - Regex
+
+- (BOOL)matchedRegex:(NSString *)regex {
+    NSRegularExpression *regular = [self regularExpressionWithRegex:regex];
+    if (!regular) { return false; }
+    
+    NSUInteger matchCount = [regular numberOfMatchesInString:self options:NSMatchingReportProgress range:NSMakeRange(0, self.length)];
+    
+    return matchCount == 0 ? false : true;
+}
+
+- (BOOL)containOfRegex:(NSString *)regex {
+    NSArray<NSTextCheckingResult *> *results = [self matchesOfRegex:regex];
+    
+    return results.count;
+}
+
+- (NSRange)firstContainOfRegex:(NSString *)regex {
+    NSRegularExpression *regular = [self regularExpressionWithRegex:regex];
+    if (!regular) { return NSMakeRange(0, 0); }
+    
+    NSTextCheckingResult *result = [regular firstMatchInString:self options:NSMatchingReportCompletion range:NSMakeRange(0, self.length-1)];
+    return result.range;
+}
+
+- (NSArray<NSString *> *)componentsMatchedOfRegex:(NSString *)regex {
+    NSArray<NSTextCheckingResult *> *results = [self matchesOfRegex:regex];
+    
+    NSMutableArray<NSString *> *mAry = [NSMutableArray arrayWithCapacity:results.count];
+    for (NSTextCheckingResult *result in results) {
+        NSString *subStr = [self substringWithRange:result.range];
+        if (subStr.length > 0) {
+            [mAry addObject:subStr];
+        }
+    }
+    
+    [self stringByReplacingOccurrencesOfString:@"" withString:@""];
+    
+    return mAry;
+}
+
+- (NSArray<NSTextCheckingResult *> *)matchesOfRegex:(NSString *)regex {
+    NSRegularExpression *regular = [self regularExpressionWithRegex:regex];
+    if (!regular) { return nil; }
+    
+    NSArray<NSTextCheckingResult *> *results = [regular matchesInString:self options:NSMatchingReportCompletion range:NSMakeRange(0, self.length-1)];
+    
+    return results;
+}
+
+- (NSString *)stringByReplacingOccurencesOfRegex:(NSString *)targetRegex withString:(NSString *)replacement {
+    
+    return [self stringByReplacingOccurencesOfRegex:targetRegex withString:replacement range:NSMakeRange(0, self.length-1)];
+}
+
+- (NSString *)stringByReplacingOccurencesOfRegex:(NSString *)targetRegex withString:(NSString *)replacement range:(NSRange)searchRange {
+    NSRegularExpression *regular = [self regularExpressionWithRegex:targetRegex];
+    if (!regular) { return self; }
+    
+    NSString *result = [regular stringByReplacingMatchesInString:self options:NSMatchingReportCompletion range:searchRange withTemplate:replacement];
+
+    return result;
+}
 
 
 // MARK: - Private Method

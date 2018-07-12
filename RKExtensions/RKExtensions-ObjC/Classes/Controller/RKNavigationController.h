@@ -24,7 +24,7 @@
 
 @interface RKNavigationController : UINavigationController<PEPBaseNavigationControllerProtocol>
 
-
+/** 导航栏返回按钮图标 */
 @property (nonatomic, strong) UIImage *backItemImage;
 
 

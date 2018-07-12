@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.delegate = self;
+
     [self replacePopGesture];
+    
 }
 
 - (void)replacePopGesture {
@@ -61,6 +63,10 @@
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     [self configNavigationBarBackItem];
+    
+    if (@available(iOS 11.0, *)) {
+        self.navigationBar.prefersLargeTitles = self.viewControllers.count == 1;
+    }
     
 }
 

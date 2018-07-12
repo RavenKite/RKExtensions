@@ -44,7 +44,8 @@
 - (UIView *)navigationBarSeparatorView {
     
     for (UIView *view in self.navigationController.navigationBar.subviews) {
-        if ([view isKindOfClass:NSClassFromString(@"_UIBarBackground")]) {
+        if ([view isKindOfClass:NSClassFromString(@"_UIBarBackground")] ||
+            [view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
             for (UIView *subview in view.subviews) {
                 if (subview.bounds.size.height <= 1) {
                     return subview;

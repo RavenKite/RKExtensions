@@ -1,0 +1,6 @@
+framework module RKRuntime {
+  umbrella header "RKRuntime-umbrella.h"
+
+  export *
+  module * { export * }
+}

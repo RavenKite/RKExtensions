@@ -1,0 +1,22 @@
+{
+  "name": "RKRuntime",
+  "version": "0.1.0",
+  "summary": "Runtime category for NSObject.",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "李沛倬": "lipeizhuo0528@outlook.com"
+  },
+  "homepage": "https://github.com/RavenKite/RKRuntime",
+  "source": {
+    "git": "https://github.com/RavenKite/RKRuntime.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "Classes/**/*",
+  "frameworks": "Foundation"
+}

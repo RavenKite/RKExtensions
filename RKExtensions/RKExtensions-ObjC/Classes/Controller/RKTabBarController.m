@@ -49,14 +49,21 @@
 }
 
 
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    if (@available(iOS 9.0, *)) {
+        self.forceTouchAvailable = previousTraitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
+    }
+}
+
 
 // MARK: - UITabBarControllerDelegate
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     
-    if (@available(iOS 10.0, *)) { // 线性马达触摸震动反馈
+    if (@available(iOS 10.0, *)) { // 线性马达触摸震动反馈(仅支持iPhone 7及以上拥有线性马达的设备)
         [[[UISelectionFeedbackGenerator alloc] init] selectionChanged];
     }
+    
 }
 
 

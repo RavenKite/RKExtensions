@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA039FC07518E89347C2D35 /* Pods_RKExtensions_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76BDD0565DDC40FAAD13404 /* Pods_RKExtensions_ObjC.framework */; };
+		E91E054320ECC66000B4ABC5 /* UIImage+RKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E054120ECC66000B4ABC5 /* UIImage+RKExtension.m */; };
+		E91E054720ECC7F300B4ABC5 /* UIColor+RKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E054620ECC7F300B4ABC5 /* UIColor+RKExtension.m */; };
+		E91E054A20ECCC1B00B4ABC5 /* RKCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E054920ECCC1B00B4ABC5 /* RKCoverView.m */; };
+		E91E1A7320F251AA00A819C1 /* String+RKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E1A7220F251AA00A819C1 /* String+RKExtension.swift */; };
+		E91E1A7520F251F800A819C1 /* RKPrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E1A7420F251F800A819C1 /* RKPrefixHeader.swift */; };
 		E96ED0F420C42975004D5097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E96ED0F320C42975004D5097 /* AppDelegate.m */; };
 		E96ED0F720C42975004D5097 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96ED0F620C42975004D5097 /* ViewController.m */; };
 		E96ED0FA20C42975004D5097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96ED0F820C42975004D5097 /* Main.storyboard */; };
@@ -28,12 +34,25 @@
 		E96ED13F20C43897004D5097 /* RKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E96ED13E20C43897004D5097 /* RKTextField.m */; };
 		E96ED14220C43901004D5097 /* NSData+RKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E96ED14120C43901004D5097 /* NSData+RKExtension.m */; };
 		E96ED14520C43937004D5097 /* NSString+RKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E96ED14420C43937004D5097 /* NSString+RKExtension.m */; };
+		E9D45E8820CD2B97008E1AB9 /* TestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D45E8720CD2B97008E1AB9 /* TestCategoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		105EEBBD1C1E4392E693DA17 /* Pods-RKExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKExtensions.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-RKExtensions/Pods-RKExtensions.debug.xcconfig"; sourceTree = "<group>"; };
 		2E21E3990ED9E492AEF45A0C /* Pods_RKExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		498AB96BB449B121323586F1 /* Pods-RKExtensions-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKExtensions-ObjC.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-RKExtensions-ObjC/Pods-RKExtensions-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		5EC0EADFCD4D24B302733C51 /* Pods-RKExtensions-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKExtensions-ObjC.release.xcconfig"; path = "../Pods/Target Support Files/Pods-RKExtensions-ObjC/Pods-RKExtensions-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		87E39DC0B120E2392597EF89 /* Pods-RKExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKExtensions.release.xcconfig"; path = "../Pods/Target Support Files/Pods-RKExtensions/Pods-RKExtensions.release.xcconfig"; sourceTree = "<group>"; };
+		A76BDD0565DDC40FAAD13404 /* Pods_RKExtensions_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKExtensions_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91E054120ECC66000B4ABC5 /* UIImage+RKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RKExtension.m"; sourceTree = "<group>"; };
+		E91E054220ECC66000B4ABC5 /* UIImage+RKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RKExtension.h"; sourceTree = "<group>"; };
+		E91E054420ECC76100B4ABC5 /* RKExtensionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKExtensionHeader.h; sourceTree = "<group>"; };
+		E91E054520ECC7F300B4ABC5 /* UIColor+RKExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RKExtension.h"; sourceTree = "<group>"; };
+		E91E054620ECC7F300B4ABC5 /* UIColor+RKExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RKExtension.m"; sourceTree = "<group>"; };
+		E91E054820ECCC1B00B4ABC5 /* RKCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKCoverView.h; sourceTree = "<group>"; };
+		E91E054920ECCC1B00B4ABC5 /* RKCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKCoverView.m; sourceTree = "<group>"; };
+		E91E1A7220F251AA00A819C1 /* String+RKExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RKExtension.swift"; sourceTree = "<group>"; };
+		E91E1A7420F251F800A819C1 /* RKPrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKPrefixHeader.swift; sourceTree = "<group>"; };
 		E96ED0F020C42975004D5097 /* RKExtensions-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RKExtensions-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96ED0F220C42975004D5097 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E96ED0F320C42975004D5097 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +91,8 @@
 		E96ED14120C43901004D5097 /* NSData+RKExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+RKExtension.m"; sourceTree = "<group>"; };
 		E96ED14320C43937004D5097 /* NSString+RKExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RKExtension.h"; sourceTree = "<group>"; };
 		E96ED14420C43937004D5097 /* NSString+RKExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RKExtension.m"; sourceTree = "<group>"; };
+		E9D45E8620CD2B97008E1AB9 /* TestCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategoryViewController.h; sourceTree = "<group>"; };
+		E9D45E8720CD2B97008E1AB9 /* TestCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA039FC07518E89347C2D35 /* Pods_RKExtensions_ObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				2E21E3990ED9E492AEF45A0C /* Pods_RKExtensions.framework */,
+				A76BDD0565DDC40FAAD13404 /* Pods_RKExtensions_ObjC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,8 +128,32 @@
 			children = (
 				105EEBBD1C1E4392E693DA17 /* Pods-RKExtensions.debug.xcconfig */,
 				87E39DC0B120E2392597EF89 /* Pods-RKExtensions.release.xcconfig */,
+				498AB96BB449B121323586F1 /* Pods-RKExtensions-ObjC.debug.xcconfig */,
+				5EC0EADFCD4D24B302733C51 /* Pods-RKExtensions-ObjC.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E91E1A6F20F24ED500A819C1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E91E1A7220F251AA00A819C1 /* String+RKExtension.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E91E1A7020F24ED500A819C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E91E1A7120F24ED500A819C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E96ED0C820C42716004D5097 = {
@@ -138,6 +185,8 @@
 				E96ED0F320C42975004D5097 /* AppDelegate.m */,
 				E96ED0F520C42975004D5097 /* ViewController.h */,
 				E96ED0F620C42975004D5097 /* ViewController.m */,
+				E9D45E8620CD2B97008E1AB9 /* TestCategoryViewController.h */,
+				E9D45E8720CD2B97008E1AB9 /* TestCategoryViewController.m */,
 				E96ED11C20C42AB6004D5097 /* Classes */,
 				E96ED0FB20C42976004D5097 /* Assets.xcassets */,
 				E96ED10020C42976004D5097 /* Info.plist */,
@@ -164,6 +213,7 @@
 		E96ED11C20C42AB6004D5097 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E91E054420ECC76100B4ABC5 /* RKExtensionHeader.h */,
 				E96ED12520C4306B004D5097 /* Category */,
 				E96ED12B20C4306B004D5097 /* Controller */,
 				E96ED12A20C4306B004D5097 /* View */,
@@ -174,6 +224,10 @@
 		E96ED11D20C42AC4004D5097 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E91E1A6F20F24ED500A819C1 /* Category */,
+				E91E1A7120F24ED500A819C1 /* Controller */,
+				E91E1A7020F24ED500A819C1 /* View */,
+				E91E1A7420F251F800A819C1 /* RKPrefixHeader.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -189,6 +243,10 @@
 				E96ED14120C43901004D5097 /* NSData+RKExtension.m */,
 				E96ED14320C43937004D5097 /* NSString+RKExtension.h */,
 				E96ED14420C43937004D5097 /* NSString+RKExtension.m */,
+				E91E054220ECC66000B4ABC5 /* UIImage+RKExtension.h */,
+				E91E054120ECC66000B4ABC5 /* UIImage+RKExtension.m */,
+				E91E054520ECC7F300B4ABC5 /* UIColor+RKExtension.h */,
+				E91E054620ECC7F300B4ABC5 /* UIColor+RKExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -202,6 +260,8 @@
 				E96ED13B20C43865004D5097 /* RKLabel.m */,
 				E96ED13D20C43897004D5097 /* RKTextField.h */,
 				E96ED13E20C43897004D5097 /* RKTextField.m */,
+				E91E054820ECCC1B00B4ABC5 /* RKCoverView.h */,
+				E91E054920ECCC1B00B4ABC5 /* RKCoverView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E96ED10320C42976004D5097 /* Build configuration list for PBXNativeTarget "RKExtensions-ObjC" */;
 			buildPhases = (
+				581115E7A60F0CEBD92DF773 /* [CP] Check Pods Manifest.lock */,
 				E96ED0EC20C42975004D5097 /* Sources */,
 				E96ED0ED20C42975004D5097 /* Frameworks */,
 				E96ED0EE20C42975004D5097 /* Resources */,
+				E0AEFABB9D60AAF5EF907CE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,15 +378,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		581115E7A60F0CEBD92DF773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RKExtensions-ObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0AEFABB9D60AAF5EF907CE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-RKExtensions-ObjC/Pods-RKExtensions-ObjC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/RKRuntime/RKRuntime.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RKRuntime.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-RKExtensions-ObjC/Pods-RKExtensions-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E96ED0EC20C42975004D5097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91E054320ECC66000B4ABC5 /* UIImage+RKExtension.m in Sources */,
 				E96ED12D20C4306B004D5097 /* UIView+RKExtension.m in Sources */,
+				E91E054720ECC7F300B4ABC5 /* UIColor+RKExtension.m in Sources */,
 				E96ED0F720C42975004D5097 /* ViewController.m in Sources */,
 				E96ED13320C4328A004D5097 /* RKNavigationController.m in Sources */,
 				E96ED12C20C4306B004D5097 /* NSArray+RKExtension.m in Sources */,
+				E9D45E8820CD2B97008E1AB9 /* TestCategoryViewController.m in Sources */,
 				E96ED13620C4354F004D5097 /* RKTabBarController.m in Sources */,
 				E96ED13F20C43897004D5097 /* RKTextField.m in Sources */,
 				E96ED13C20C43865004D5097 /* RKLabel.m in Sources */,
@@ -334,6 +440,7 @@
 				E96ED0F420C42975004D5097 /* AppDelegate.m in Sources */,
 				E96ED13920C436E4004D5097 /* RKViewController.m in Sources */,
 				E96ED14220C43901004D5097 /* NSData+RKExtension.m in Sources */,
+				E91E054A20ECCC1B00B4ABC5 /* RKCoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +448,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91E1A7320F251AA00A819C1 /* String+RKExtension.swift in Sources */,
 				E96ED10F20C42998004D5097 /* ViewController.swift in Sources */,
 				E96ED10D20C42998004D5097 /* AppDelegate.swift in Sources */,
+				E91E1A7520F251F800A819C1 /* RKPrefixHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,13 +609,14 @@
 		};
 		E96ED10420C42976004D5097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498AB96BB449B121323586F1 /* Pods-RKExtensions-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF2WR8WQT5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RKExtensions-ObjC/PrefixHeader.pch";
 				INFOPLIST_FILE = "RKExtensions-ObjC/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,13 +629,14 @@
 		};
 		E96ED10520C42976004D5097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC0EADFCD4D24B302733C51 /* Pods-RKExtensions-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF2WR8WQT5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RKExtensions-ObjC/PrefixHeader.pch";
 				INFOPLIST_FILE = "RKExtensions-ObjC/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,7 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF2WR8WQT5;
 				INFOPLIST_FILE = "RKExtensions-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,7 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF2WR8WQT5;
 				INFOPLIST_FILE = "RKExtensions-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

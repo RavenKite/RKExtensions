@@ -11,7 +11,7 @@
 @interface RKTabBarController : UITabBarController
 
 
-/** 是否支持ForceTouch */
+/** 是否支持ForceTouch(3D Touch) */
 @property (nonatomic, assign) BOOL forceTouchAvailable;
 
 /**

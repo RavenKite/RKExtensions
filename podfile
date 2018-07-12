@@ -9,11 +9,13 @@ workspace 'RKExtensions.xcworkspace'
 def common_pods
     
     pod 'Masonry'
+    
+    pod 'RKRuntime', :git => 'https://github.com/RavenKite/RKRuntime.git'
         
 end
 
 
-target 'RKExtensions' do
+target 'RKExtensions-ObjC' do
     project 'RKExtensions/RKExtensions.xcodeproj'
 
     common_pods
