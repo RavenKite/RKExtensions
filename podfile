@@ -23,3 +23,9 @@ target 'RKExtensions-ObjC' do
 end
 
 
+target 'RKExtensions-Swift' do
+    project 'RKExtensions/RKExtensions.xcodeproj'
+    
+    pod 'SnapKit'
+end
+

@@ -1,14 +1,17 @@
 PODS:
   - Masonry (1.1.0)
   - RKRuntime (0.1.0)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Masonry
   - RKRuntime (from `https://github.com/RavenKite/RKRuntime.git`)
+  - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
+    - SnapKit
 
 EXTERNAL SOURCES:
   RKRuntime:
@@ -22,7 +25,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   RKRuntime: 2320d0c9794eef18c174918ee90cad3ac27d2349
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: ae8e7ecedc0a0499c058d73e0b148310a536ad1e
+PODFILE CHECKSUM: 2426aa3cc0b91a7a650752ffee7e03f8ebd2bb21
 
 COCOAPODS: 1.5.3

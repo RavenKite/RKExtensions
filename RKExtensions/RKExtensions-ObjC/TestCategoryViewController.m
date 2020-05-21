@@ -9,6 +9,7 @@
 #import "TestCategoryViewController.h"
 
 #import "NSString+RKExtension.h"
+#import "UIDevice+RKMachineModel.h"
 
 @interface TestCategoryViewController ()
 
@@ -61,6 +62,11 @@
 - (IBAction)dataButtonAction:(UIButton *)sender {
     
     
+}
+
+- (IBAction)deviceButtonAction:(UIButton *)sender {
+    
+    [self showDeviceInfo];
 }
 
 
@@ -138,6 +144,23 @@
     value = dic[nilKey];
     value = multiMDic[nilKey];
     
+}
+
+
+// MARK: - Device
+
+- (void)showDeviceInfo {
+    UIDevice *device = UIDevice.currentDevice;
+
+    NSString *message = [NSString stringWithFormat:@"机型：%@\n运营商：%@\n内存：%@\n存储版本：%@\n总存储空间：%ldMB\n可用空间：%ldMB", device.machineModel, device.telephonyInfo, device.memory, device.storage, (NSInteger)device.totalDiskSpace, (NSInteger)device.freeDiskSpace];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设备信息" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:true completion:nil];
 }
 
 

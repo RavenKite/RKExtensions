@@ -64,10 +64,6 @@
     
     [self configNavigationBarBackItem];
     
-    if (@available(iOS 11.0, *)) {
-        self.navigationBar.prefersLargeTitles = self.viewControllers.count == 1;
-    }
-    
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {

@@ -96,12 +96,12 @@ static NSString * const kURLEncodeParameter = @"!*'();:@&=+$,/?%#[]";
     return [self matchedRegex:kRegexEamil];
 }
 
-- (BOOL)isPhonNumber {
+- (BOOL)isPhoneNumber {
     return [self matchedRegex:kRegexPhoneNumber];
 }
 
 - (BOOL)isNumber {
-    return [self matchedRegex:kRegexEamil];
+    return [self matchedRegex:kRegexNumber];
 }
 
 

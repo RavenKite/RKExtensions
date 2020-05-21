@@ -18,10 +18,45 @@ class ViewController: UIViewController {
         
         let encode = str.urlEncode()
         
+        
         print_debug(encode)
     }
 
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let tabBarVC = self.tabBarController as! RKTabBarController
+//        let rect = tabBarVC.barItemFrame(withIndex: 0)
+//        print_debug(rect)
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

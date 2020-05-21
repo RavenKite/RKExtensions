@@ -44,7 +44,7 @@
 
 - (BOOL)isEmail;
 
-- (BOOL)isPhonNumber;
+- (BOOL)isPhoneNumber;
 
 - (BOOL)isNumber;
 
